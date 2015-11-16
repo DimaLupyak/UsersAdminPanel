@@ -1,0 +1,26 @@
+﻿@{
+    ViewBag.Title = "Index";
+    var options = new AjaxOptions()
+    {
+        UpdateTargetId = "tabledata",
+        Url = Url.Action("UsersTableData")
+    };
+}
+
+<h2>Users</h2>
+
+<p>
+    @Html.Partial("Create")
+</p>
+
+@using (Ajax.BeginForm(options))
+{
+<div id="tabledata">
+    @Html.Action("UsersTableData")    
+</div>
+}
+
+@section scripts
+{
+    <script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+}

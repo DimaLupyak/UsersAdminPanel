@@ -1,4 +1,4 @@
-namespace UsersAdminPanel
+namespace UsersAdminPanel.Models
 {
     using System;
     using System.Data.Entity;
