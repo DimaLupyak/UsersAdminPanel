@@ -4,20 +4,23 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title</title>
-    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />   
     <link href="~/Content/GridStyles.css" rel="stylesheet" />
     @RenderSection("styles", required: false) 
-    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
-    <script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>      
+        
 </head>
 <body>
-    <div class="logo">
-        @Html.ActionLink("Hello World!", "Index", "Users", new { area = "" })
+    <div class="headerSite">
+        <div class="logo">
+            @Html.ActionLink("Hello World!", "Index", "Users", new { area = "" })
+        </div>
     </div>
 
     <div class="body-content">
         @RenderBody()
     </div>
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
     @RenderSection("scripts", required: false)
 </body>
 </html>

@@ -1,20 +1,69 @@
-﻿body {
-    padding-top: 15px;
-    padding-bottom: 20px;
+﻿body 
+{
+    margin-left: 20%;
+    margin-right: 20%;
 }
 
-/* Set padding to keep content from hitting the edges */
-.body-content {
-    padding-left: 15px;
-    padding-right: 15px;
-    margin-left: 10%;
-    margin-right: 10%;
+.body-content 
+{
+    margin-left: 2%;
+    margin-right: 2%;
 }
 
-/* Set width on the form input elements since they're 100% wide by default */
 input,
 select,
-textarea {
+textarea 
+{
     max-width: 280px;
+}
+.headerSite 
+{
+  background-color: skyblue        
+}
+
+.logo 
+{
+    margin-left: 2%;
+    padding: 1%;
+}
+
+.modalWindow
+{
+    z-index:1;
+    position:absolute;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    height: 100%;
+    visibility:hidden;
+}
+
+.modalBackground
+{
+    z-index:2;
+    position:relative;
+     position:absolute;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    height: 100%;
+    background-color:rgba(0, 0, 0, 0.6);
+}
+
+.modalView
+{
+    z-index:3;
+    position:relative;
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-top: 10%;
+    background-color:blueviolet;
+}
+.modalContent
+{
+    z-index:4;
+    position:relative;
+    background-color:azure;
+    padding: 5%;
 }
 

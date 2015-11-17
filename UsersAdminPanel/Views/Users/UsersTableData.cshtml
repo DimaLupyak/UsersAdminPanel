@@ -1,5 +1,9 @@
 ﻿@model IEnumerable<UsersAdminPanel.Models.User>
 
+@section styles
+{
+}
+
 @{
     var grid = new WebGrid(source: Model, rowsPerPage: 5, ajaxUpdateContainerId: "grid");
 }

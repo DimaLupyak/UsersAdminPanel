@@ -10,14 +10,44 @@
 }
 
 <h2>Users</h2>
-
+<input type="button" value="Add" id="btnAdd" />
 @using (Ajax.BeginForm(options))
 {
-<div id="modalView">
-    @Html.Partial("Create")
-</div>
-<div id="tabledata">
-    @Html.Action("UsersTableData", new { user = Model })
-</div>
-}
+    <div id="modalWindow" class="modalWindow">
+        <div id="modalBackground" class="modalBackground">
+        </div>
+        <div class="modalView">
+            <div class="modalContent">
+                @Html.Partial("Create")
+            </div>
+        </div>
+    </div>
+            <div id="tabledata">
+                @Html.Action("UsersTableData", new { user = Model })
+            </div>
+            }
 
+            @section scripts
+{
+                <script>
+                    var modalWindow;
+
+                    window.onload = function () {
+                        
+                        modalWindow = document.getElementById("modalWindow");
+                        document.getElementById("btnAdd").onclick = function () {
+                            modalWindow.style.visibility = "visible"
+                        }
+                        document.getElementById("btnModalAdd").onclick = function () {
+                            modalWindow.style.visibility = "hidden"
+                        }
+                        document.getElementById("btnModalCancel").onclick = function () {
+                            modalWindow.style.visibility = "hidden"
+                        }
+                        document.getElementById("modalBackground").onclick = function () {
+                            modalWindow.style.visibility = "hidden"
+                        }
+                    }
+                </script>
+                
+            }
