@@ -2,13 +2,15 @@
 .grid 
 {
 	background-color:black;
-	border:0;
+	border:groove;
+    width:40%;
 }
 
 /*Стиль для заголовка таблицы*/
 .header
 {
-	background-color:Red;	
+	background-color:darkgray;
+    text-align:left;
 }
 
 /*Строка таблицы*/
@@ -26,5 +28,5 @@
 /*Последняя строка таблицы*/
 .footer
 {
-	background-color:Yellow;
+	background-color:dimgrey;
 }

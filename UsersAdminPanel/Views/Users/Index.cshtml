@@ -1,4 +1,6 @@
-﻿@{
+﻿@model UsersAdminPanel.Models.User
+
+@{
     ViewBag.Title = "Index";
     var options = new AjaxOptions()
     {
@@ -9,18 +11,13 @@
 
 <h2>Users</h2>
 
-<p>
-    @Html.Partial("Create")
-</p>
-
 @using (Ajax.BeginForm(options))
 {
+<div id="modalView">
+    @Html.Partial("Create")
+</div>
 <div id="tabledata">
-    @Html.Action("UsersTableData")    
+    @Html.Action("UsersTableData", new { user = Model })
 </div>
 }
 
-@section scripts
-{
-    <script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
-}
