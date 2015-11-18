@@ -9,12 +9,12 @@
     };
 }
 
-<h2>Users</h2>
+<h2 id="heading">Users</h2>
 <input type="button" value="Add" id="btnAdd" />
 @using (Ajax.BeginForm(options))
 {
-    <div id="modalWindow" class="modalWindow">
-        <div id="modalBackground" class="modalBackground">
+    <div class="modalWindow">
+        <div id="modalBackground" class="modalBackground hiddener">
         </div>
         <div class="modalView">
             <div class="modalContent">
@@ -28,26 +28,19 @@
             }
 
             @section scripts
-{
+            {
                 <script>
-                    var modalWindow;
-
-                    window.onload = function () {
-                        
-                        modalWindow = document.getElementById("modalWindow");
-                        document.getElementById("btnAdd").onclick = function () {
-                            modalWindow.style.visibility = "visible"
-                        }
-                        document.getElementById("btnModalAdd").onclick = function () {
-                            modalWindow.style.visibility = "hidden"
-                        }
-                        document.getElementById("btnModalCancel").onclick = function () {
-                            modalWindow.style.visibility = "hidden"
-                        }
-                        document.getElementById("modalBackground").onclick = function () {
-                            modalWindow.style.visibility = "hidden"
-                        }
-                    }
+                    $(document).ready(function () {
+                        $('#btnAdd').click(function () {
+                            $(".modalWindow").css("visibility", "visible");
+                        });
+                        $(".hiddener").click(function () {
+                            $(".modalWindow").css("visibility", "hidden");
+                        });
+                        $("#btnAdd").click(function () {
+                            $(".text-box").val("");
+                        });
+                    });
                 </script>
                 
             }

@@ -1,12 +1,12 @@
 ﻿@model UsersAdminPanel.Models.User
 
 <div>
-    <h4>Add User</h4>
+    <h4 class="modalTitle">Add User</h4>
     <div>
         @Html.LabelFor(model => model.Name)
         @Html.EditorFor(model => model.Name)
-        <input type="submit" value="Add" id="btnModalAdd" />
-        <input type="reset" value="Cancel"  id="btnModalCancel"/>
+        <input type="submit" value="Add" id="btnModalAdd" class="hiddener">
+        <input type="reset" value="Cancel"  id="btnModalCancel" class="hiddener"/>
     </div>
 </div>
 
